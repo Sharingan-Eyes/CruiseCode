@@ -1,40 +1,59 @@
-# CruiseCode
+# Cruise
 
-## Setup
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
 
-Clone the repository
+## Development server
 
-```bash
-git clone https://AlaskaX@dev.azure.com/AlaskaX/CruiseCodeAngular/_git/CruiseCodeAngular
-
-cd CruiseCodeAngular/cruise-code
-```
-
-Install dependencies
+To start a local development server, run:
 
 ```bash
-npm i
+ng serve
 ```
 
-Run the app locally
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
-npm run start
+ng generate component component-name
 ```
 
-Setup Husky if it doesn't automatically setup your git hooks (this should trigger linting when you do a git commit and a build when you're pushing to git)
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
-npm run prepare
+ng generate --help
 ```
 
-## Project Structure Overview
+## Building
 
-### Other parts of the application
+To build the project run:
 
--   `shared`: contains shared components and pipes (services that are meant to be singleton are located inside `core`).
--   `core`: contains helper functions and singleton services such as `constants`, `guards`, `models`, `services`, `state`, and `utils`.
+```bash
+ng build
+```
 
-### Additional notes
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-Most services (especially the api related ones) are stateless. Application state are all managed either contextually in the component (if its local to the component) or in the `*.state.ts` files in the `src/core/states` directory.
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
